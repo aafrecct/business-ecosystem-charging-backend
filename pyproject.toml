@@ -1,0 +1,25 @@
+[tool.coverage.run]
+branch = true
+source = ["."]
+omit = ["*test*"]
+
+[tool.coverage.report]
+exclude_lines = ["if __name__ == .__main__.:"]
+omit = ["*test*"]
+
+
+[tool.black]
+line-length = 120
+target-version = ['py38', 'py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | \docker
+  | \docker-dev
+)/
+'''

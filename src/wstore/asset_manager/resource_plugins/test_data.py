@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2015 - 2016 CoNWeT Lab., Universidad Politécnica de Madrid
@@ -23,54 +22,51 @@
 from copy import deepcopy
 
 PLUGIN_INFO = {
-  "name": "test plugin",
-  "author": "test author",
-  "version": "1.0",
-  "module": "test.TestPlugin",
-  "media_types": [
-      "application/x-widget+mashable-application-component",
-      "application/x-mashup+mashable-application-component",
-      "application/x-operator+mashable-application-component"
-  ],
-  "formats": ["FILE"],
-  "form": {
-      "vendor": {
-         "type": "text",
-         "placeholder": "Vendor",
-         "default": "default vendor",
-         "label": "Vendor"
-      },
-      "name": {
-         "type": "text",
-         "placeholder": "Name",
-         "default": "default name",
-         "label": "Name",
-         "mandatory": True
-      },
-      "type": {
-          "type": "select",
-          "label": "Select",
-          "options": [{
-              "text": "Option 1",
-              "value": "opt1"
-          }, {
-              "text": "Option 2",
-              "value": "opt2"
-          }]
-      },
-      "is_op": {
-          "type": "checkbox",
-          "label": "Is a checkbox",
-          "text": "The checkbox",
-          "default": True
-      },
-      "area": {
-          "type": "textarea",
-          "label": "Area",
-          "default": "default value",
-          "placeholder": "placeholder"
-      }
-  }
+    "name": "test plugin",
+    "author": "test author",
+    "version": "1.0",
+    "module": "test.TestPlugin",
+    "media_types": [
+        "application/x-widget+mashable-application-component",
+        "application/x-mashup+mashable-application-component",
+        "application/x-operator+mashable-application-component",
+    ],
+    "formats": ["FILE"],
+    "form": {
+        "vendor": {
+            "type": "text",
+            "placeholder": "Vendor",
+            "default": "default vendor",
+            "label": "Vendor",
+        },
+        "name": {
+            "type": "text",
+            "placeholder": "Name",
+            "default": "default name",
+            "label": "Name",
+            "mandatory": True,
+        },
+        "type": {
+            "type": "select",
+            "label": "Select",
+            "options": [
+                {"text": "Option 1", "value": "opt1"},
+                {"text": "Option 2", "value": "opt2"},
+            ],
+        },
+        "is_op": {
+            "type": "checkbox",
+            "label": "Is a checkbox",
+            "text": "The checkbox",
+            "default": True,
+        },
+        "area": {
+            "type": "textarea",
+            "label": "Area",
+            "default": "default value",
+            "placeholder": "placeholder",
+        },
+    },
 }
 
 PLUGIN_INFO2 = {
@@ -78,7 +74,7 @@ PLUGIN_INFO2 = {
     "author": "test author",
     "version": "1.0",
     "module": "test.TestPlugin",
-    "formats": ["FILE"]
+    "formats": ["FILE"],
 }
 
 PLUGIN_INFO_ACCOUNTING = {
@@ -112,7 +108,7 @@ MISSING_NAME = {
     "version": "1.0",
     "module": "test.TestPlugin",
     "media_types": [],
-    "formats": ["FILE"]
+    "formats": ["FILE"],
 }
 
 INVALID_NAME = {
@@ -121,7 +117,7 @@ INVALID_NAME = {
     "version": "1.0",
     "module": "test.TestPlugin",
     "media_types": [],
-    "formats": ["FILE"]
+    "formats": ["FILE"],
 }
 
 MISSING_AUTHOR = {
@@ -129,7 +125,7 @@ MISSING_AUTHOR = {
     "version": "1.0",
     "module": "test.TestPlugin",
     "media_types": [],
-    "formats": ["FILE"]
+    "formats": ["FILE"],
 }
 
 MISSING_FORMATS = {
@@ -137,7 +133,7 @@ MISSING_FORMATS = {
     "author": "test author",
     "version": "1.0",
     "module": "test.TestPlugin",
-    "media_types": []
+    "media_types": [],
 }
 
 MISSING_MODULE = {
@@ -145,7 +141,7 @@ MISSING_MODULE = {
     "author": "test author",
     "version": "1.0",
     "media_types": [],
-    "formats": ["FILE"]
+    "formats": ["FILE"],
 }
 
 MISSING_VERSION = {
@@ -153,7 +149,7 @@ MISSING_VERSION = {
     "author": "test author",
     "module": "test.TestPlugin",
     "media_types": [],
-    "formats": ["FILE"]
+    "formats": ["FILE"],
 }
 
 INVALID_NAME_TYPE = {
@@ -162,7 +158,7 @@ INVALID_NAME_TYPE = {
     "version": "1.0",
     "module": "test.TestPlugin",
     "media_types": [],
-    "formats": ["FILE"]
+    "formats": ["FILE"],
 }
 
 INVALID_AUTHOR_TYPE = {
@@ -171,7 +167,7 @@ INVALID_AUTHOR_TYPE = {
     "version": "1.0",
     "module": "test.TestPlugin",
     "media_types": [],
-    "formats": ["FILE"]
+    "formats": ["FILE"],
 }
 
 INVALID_FORMAT_TYPE = {
@@ -180,7 +176,7 @@ INVALID_FORMAT_TYPE = {
     "version": "1.0",
     "module": "test.TestPlugin",
     "media_types": [],
-    "formats": "FILE"
+    "formats": "FILE",
 }
 
 INVALID_FORMAT = {
@@ -189,7 +185,7 @@ INVALID_FORMAT = {
     "version": "1.0",
     "module": "test.TestPlugin",
     "media_types": [],
-    "formats": ["FILE", "URL", "INV"]
+    "formats": ["FILE", "URL", "INV"],
 }
 
 INVALID_MEDIA_TYPE = {
@@ -198,7 +194,7 @@ INVALID_MEDIA_TYPE = {
     "version": "1.0",
     "module": "test.TestPlugin",
     "media_types": "text/plain",
-    "formats": ["FILE", "URL"]
+    "formats": ["FILE", "URL"],
 }
 
 INVALID_MODULE_TYPE = {
@@ -207,7 +203,7 @@ INVALID_MODULE_TYPE = {
     "version": "1.0",
     "module": [],
     "media_types": ["text/plain"],
-    "formats": ["FILE", "URL"]
+    "formats": ["FILE", "URL"],
 }
 
 INVALID_VERSION = {
@@ -216,7 +212,7 @@ INVALID_VERSION = {
     "version": "1.a",
     "module": "test.TestPlugin",
     "media_types": ["text/plain"],
-    "formats": ["FILE", "URL"]
+    "formats": ["FILE", "URL"],
 }
 
 INVALID_VERSION = {
@@ -225,7 +221,7 @@ INVALID_VERSION = {
     "version": "1.a",
     "module": "test.TestPlugin",
     "media_types": ["text/plain"],
-    "formats": ["FILE", "URL"]
+    "formats": ["FILE", "URL"],
 }
 
 INVALID_ACCOUNTING = {
@@ -235,7 +231,7 @@ INVALID_ACCOUNTING = {
     "module": "test.TestPlugin",
     "media_types": ["text/plain"],
     "formats": ["FILE", "URL"],
-    "pull_accounting": "true"
+    "pull_accounting": "true",
 }
 
 BASIC_PLUGIN_DATA = {
@@ -248,12 +244,10 @@ BASIC_PLUGIN_DATA = {
 }
 
 INVALID_FORM_TYPE = deepcopy(BASIC_PLUGIN_DATA)
-INVALID_FORM_TYPE['form'] = ""
+INVALID_FORM_TYPE["form"] = ""
 
 INVALID_FORM_ENTRY_TYPE = deepcopy(BASIC_PLUGIN_DATA)
-INVALID_FORM_ENTRY_TYPE["form"] = {
-    "name": "input"
-}
+INVALID_FORM_ENTRY_TYPE["form"] = {"name": "input"}
 
 INVALID_FORM_MISSING_TYPE = deepcopy(BASIC_PLUGIN_DATA)
 INVALID_FORM_MISSING_TYPE["form"] = {
@@ -261,7 +255,7 @@ INVALID_FORM_MISSING_TYPE["form"] = {
         "placeholder": "Name",
         "default": "Default name",
         "label": "Name",
-        "mandatory": True
+        "mandatory": True,
     }
 }
 
@@ -272,7 +266,7 @@ INVALID_FORM_INV_TYPE["form"] = {
         "placeholder": "Name",
         "default": "Default name",
         "label": "Name",
-        "mandatory": True
+        "mandatory": True,
     }
 }
 
@@ -283,36 +277,18 @@ INVALID_FORM_INVALID_NAME["form"] = {
         "placeholder": "Name",
         "default": "Default name",
         "label": "Name",
-        "mandatory": True
+        "mandatory": True,
     }
 }
 
 INVALID_FORM_CHECKBOX_DEF = deepcopy(BASIC_PLUGIN_DATA)
-INVALID_FORM_CHECKBOX_DEF["form"] = {
-    "check": {
-        "type": "checkbox",
-        "default": "Default name",
-        "label": "Name"
-    }
-}
+INVALID_FORM_CHECKBOX_DEF["form"] = {"check": {"type": "checkbox", "default": "Default name", "label": "Name"}}
 
 INVALID_FORM_TEXT = deepcopy(BASIC_PLUGIN_DATA)
-INVALID_FORM_TEXT["form"] = {
-    "textf": {
-        "type": "text",
-        "default": True,
-        "label": {},
-        "mandatory": "true"
-    }
-}
+INVALID_FORM_TEXT["form"] = {"textf": {"type": "text", "default": True, "label": {}, "mandatory": "true"}}
 
 INVALID_FORM_TEXTAREA = deepcopy(BASIC_PLUGIN_DATA)
-INVALID_FORM_TEXTAREA["form"] = {
-    "textf": {
-        "type": "textarea",
-        "placeholder": 25
-    }
-}
+INVALID_FORM_TEXTAREA["form"] = {"textf": {"type": "textarea", "placeholder": 25}}
 
 INVALID_FORM_SELECT = deepcopy(BASIC_PLUGIN_DATA)
 INVALID_FORM_SELECT["form"] = {
@@ -321,10 +297,7 @@ INVALID_FORM_SELECT["form"] = {
         "default": 25,
         "label": 30,
         "mandatory": "true",
-        "options": [{
-            "text": "value",
-            "value": "value"
-        }]
+        "options": [{"text": "value", "value": "value"}],
     }
 }
 
@@ -336,39 +309,18 @@ INVALID_FORM_SELECT_MISS_OPT["form"] = {
 }
 
 INVALID_FORM_SELECT_INV_OPT = deepcopy(BASIC_PLUGIN_DATA)
-INVALID_FORM_SELECT_INV_OPT["form"] = {
-    "select": {
-        "type": "select",
-        "options": "option1"
-    }
-}
+INVALID_FORM_SELECT_INV_OPT["form"] = {"select": {"type": "select", "options": "option1"}}
 
 INVALID_FORM_SELECT_EMPTY_OPT = deepcopy(BASIC_PLUGIN_DATA)
-INVALID_FORM_SELECT_EMPTY_OPT["form"] = {
-    "select": {
-        "type": "select",
-        "options": []
-    }
-}
+INVALID_FORM_SELECT_EMPTY_OPT["form"] = {"select": {"type": "select", "options": []}}
 
 INVALID_FORM_SELECT_INV_OPT_VAL = deepcopy(BASIC_PLUGIN_DATA)
-INVALID_FORM_SELECT_INV_OPT_VAL["form"] = {
-    "select": {
-        "type": "select",
-        "options": ["option1"]
-    }
-}
+INVALID_FORM_SELECT_INV_OPT_VAL["form"] = {"select": {"type": "select", "options": ["option1"]}}
 
 
 INVALID_FORM_SELECT_INV_OPT_VAL2 = deepcopy(BASIC_PLUGIN_DATA)
 INVALID_FORM_SELECT_INV_OPT_VAL2["form"] = {
-    "select": {
-        "type": "select",
-        "options": [{}, {
-            "text": 1,
-            "value": "value"
-        }]
-    }
+    "select": {"type": "select", "options": [{}, {"text": 1, "value": "value"}]}
 }
 
 
@@ -379,7 +331,7 @@ INVALID_OVERRIDES = {
     "module": "test.TestPlugin",
     "media_types": ["text/plain"],
     "formats": ["FILE", "URL"],
-    "overrides": ["INVALID"]
+    "overrides": ["INVALID"],
 }
 
 INVALID_FORM_ORDER_FORMAT = {
@@ -397,9 +349,9 @@ INVALID_FORM_ORDER_FORMAT = {
             "placeholder": "Name",
             "default": "Default name",
             "label": "Name",
-            "mandatory": True
+            "mandatory": True,
         }
-    }
+    },
 }
 
 INVALID_FORM_ORDER_NO_FORM = {
@@ -410,7 +362,7 @@ INVALID_FORM_ORDER_NO_FORM = {
     "media_types": ["text/plain"],
     "formats": ["FILE", "URL"],
     "overrides": [],
-    "form_order": []
+    "form_order": [],
 }
 
 INVALID_FORM_ORDER_MISSING_KEY = {
@@ -428,9 +380,9 @@ INVALID_FORM_ORDER_MISSING_KEY = {
             "placeholder": "Name",
             "default": "Default name",
             "label": "Name",
-            "mandatory": True
+            "mandatory": True,
         }
-    }
+    },
 }
 
 INVALID_FORM_ORDER_DIFFERENT_KEY = {
@@ -448,7 +400,7 @@ INVALID_FORM_ORDER_DIFFERENT_KEY = {
             "placeholder": "Name",
             "default": "Default name",
             "label": "Name",
-            "mandatory": True
+            "mandatory": True,
         }
-    }
+    },
 }
