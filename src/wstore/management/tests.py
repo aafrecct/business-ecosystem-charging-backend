@@ -20,13 +20,11 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from bson import ObjectId
 from django.core.management import call_command
 from django.core.management.base import CommandError
 from django.test import TestCase
 from mock import ANY, MagicMock, call
 from parameterized import parameterized
-
 from wstore.management.commands import downgradeplugin, loadplugin, removeplugin, resend_upgrade
 
 
@@ -43,7 +41,7 @@ class PluginManagementTestCase(TestCase):
     def _downgrade_plugin_error(self):
         self.loader_mock.downgrade_plugin.side_effect = Exception("Error downgrading plugin")
 
-    def _unistall_plugin_error(self):
+    def _uninstall_plugin_error(self):
         self.loader_mock.uninstall_plugin.side_effect = Exception("Error uninstalling plugin")
 
     def _check_loaded(self):
@@ -148,7 +146,7 @@ class PluginManagementTestCase(TestCase):
                 "exception",
                 ["test_plugin"],
                 None,
-                _unistall_plugin_error,
+                _uninstall_plugin_error,
                 "Error uninstalling plugin",
             ),
         ]

@@ -7,6 +7,11 @@ omit = ["*test*"]
 exclude_lines = ["if __name__ == .__main__.:"]
 omit = ["*test*"]
 
+[tool.isort]
+profile = "black"
+line_length = 120
+src_paths = ["wstore"]
+skip_gitignore = true
 
 [tool.black]
 line-length = 120

@@ -30,7 +30,6 @@ class AuthenticationMiddleware:
     def _get_api_user(self, request):
         from django.conf import settings
         from django.contrib.auth.models import AnonymousUser
-
         from wstore.models import Organization, User
 
         # Get User information from the request

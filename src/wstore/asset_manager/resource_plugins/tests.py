@@ -31,7 +31,6 @@ from django.test import TestCase
 from mock import MagicMock, call
 from parameterized import parameterized
 from requests.exceptions import HTTPError
-
 from wstore.asset_manager.resource_plugins import decorators, plugin, plugin_loader
 from wstore.asset_manager.resource_plugins.plugin_error import PluginError
 from wstore.asset_manager.resource_plugins.plugin_validator import PluginValidator
@@ -63,9 +62,9 @@ class PluginLoaderTestCase(TestCase):
 
     def _clean_plugin_dir(self):
         plugin_dir = os.path.join("wstore", "test")
-        for plugin in os.listdir(plugin_dir):
-            if plugin != "test_plugin_files":
-                rmtree(os.path.join(plugin_dir, plugin), True)
+        for plugin_f in os.listdir(plugin_dir):
+            if plugin_f != "test_plugin_files":
+                rmtree(os.path.join(plugin_dir, plugin_f), True)
 
     def tearDown(self):
         reload(plugin_loader)

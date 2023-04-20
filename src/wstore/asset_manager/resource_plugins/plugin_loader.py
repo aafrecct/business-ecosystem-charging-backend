@@ -27,7 +27,6 @@ from shutil import rmtree
 
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist, PermissionDenied
-
 from wstore.asset_manager.resource_plugins.plugin import Plugin
 from wstore.asset_manager.resource_plugins.plugin_error import PluginError
 from wstore.asset_manager.resource_plugins.plugin_rollback import installPluginRollback
@@ -159,7 +158,7 @@ class PluginLoader(object):
 
         self._update_model_data_from_json(plugin_model, module, json_info)
         rb_log.log_action("MODEL", plugin_model)
-        logger.debug(f"Plugin model saved to database")
+        logger.debug("Plugin model saved to database")
 
         # Configure usage specifications if needed
         if plugin_model.pull_accounting:
@@ -243,7 +242,6 @@ class PluginLoader(object):
             raise PermissionDenied("The plugin " + plugin_id + " is being used in some resources")
 
         while plugin_model.version_history:
-            version = plugin_model.version_history[-1]
             self._downgrade_plugin_to_last_version(plugin_id, plugin_model)
 
         if plugin_model.pull_accounting:

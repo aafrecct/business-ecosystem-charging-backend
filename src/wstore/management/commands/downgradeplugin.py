@@ -21,7 +21,6 @@
 
 
 from django.core.management.base import BaseCommand, CommandError
-
 from wstore.asset_manager.resource_plugins.plugin_loader import PluginLoader
 
 

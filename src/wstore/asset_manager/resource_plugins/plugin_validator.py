@@ -87,7 +87,7 @@ class PluginValidator:
                 reasonStr += "\nInvalid form field: Missing or invalid options in " + k + " field"
             else:
                 for option in value["options"]:
-                    if not isinstance(option, dict) or not "text" in option or not "value" in option:
+                    if not isinstance(option, dict) or "text" not in option or "value" not in option:
                         reasonStr += (
                             "\nInvalid form field: Invalid option in "
                             + k
@@ -231,7 +231,7 @@ class PluginValidator:
         if pulls_accounting and sum(pull_accounting_implemented.values()) != 2:
             logger.error("Pull accounting methods missing")
             return (
-                f"Pull accounting is true, but some neccesary methods are missing. Here are the neccesary methods: \n"
+                "Pull accounting is true, but some neccesary methods are missing. Here are the neccesary methods: \n"
                 + "\n".join(
                     f"{method}: {'IMPLEMENTED' if value else 'MISSING'}"
                     for method, value in pull_accounting_implemented.items()
@@ -240,7 +240,7 @@ class PluginValidator:
         elif not pulls_accounting and sum(pull_accounting_implemented.values()) != 0:
             logger.error("Pull accounting methods unnecessary")
             return (
-                f"Pull accounting is false, but some methods are implemented. Here are the neccesary methods: \n"
+                "Pull accounting is false, but some methods are implemented. Here are the neccesary methods: \n"
                 + "\n".join(
                     f"{method}: {'IMPLEMENTED' if value else 'OK'}"
                     for method, value in pull_accounting_implemented.items()
